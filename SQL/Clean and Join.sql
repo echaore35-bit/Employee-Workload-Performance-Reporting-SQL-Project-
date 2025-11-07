@@ -54,6 +54,7 @@ SELECT DISTINCT Project
 FROM WorkHours
 ORDER BY Project;
 
+-- Create View for Joining Both Tables
 CREATE VIEW vw_CleanEmployeeWorkHours AS
 WITH CleanEmployees AS
 (
@@ -111,4 +112,5 @@ SELECT
 FROM CleanEmployees e
 LEFT JOIN CleanWorkHours w
     ON e.EmployeeID = w.EmployeeID;
+
 
